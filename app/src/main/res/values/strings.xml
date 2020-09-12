@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">MARVEL</string>
 
+    <!-- Toolbar Name -->
+    <string name="toolbar_principal">MARVEL</string>
+
     <!-- Intros -->
     <string name="intro_text1">Encontre seus heróis favoritos</string>
     <string name="intro_text2">Força e poder incontrolável</string>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:layout_marginLeft="10dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/grayDarkColor2"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageHero"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/writeColor"
+            android:scaleType="fitXY"
+            tools:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/textHeroName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageHero"
+            android:layout_centerHorizontal="true"
+            android:background="@color/writeColor"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/grayDarkColor2"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:text="Heroi Nome" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
