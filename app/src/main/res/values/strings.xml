@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Marvel</string>
+    <string name="app_name">MARVEL</string>
+
+    <!-- Intros -->
+    <string name="intro_text1">Encontre seus heróis favoritos</string>
+    <string name="intro_text2">Força e poder incontrolável</string>
+    <string name="intro_text3">Preparado? Vamos nessa!</string>
+    <string name="into_button">Let\'s Go Hero</string>
+
 </resources>
