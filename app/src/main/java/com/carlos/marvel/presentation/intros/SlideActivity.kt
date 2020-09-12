@@ -16,7 +16,6 @@ import com.heinrichreimersoftware.materialintro.slide.FragmentSlide
 class SlideActivity : IntroActivity () {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.intro_1)
 
         isButtonBackVisible = false
         isButtonNextVisible = false
