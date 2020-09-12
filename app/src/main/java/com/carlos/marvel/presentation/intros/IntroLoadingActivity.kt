@@ -11,6 +11,10 @@ import com.carlos.marvel.R
 import kotlinx.android.synthetic.main.activity_intro_loading.*
 import java.util.*
 
+/**
+ * Created by CarlosJr
+ */
+
 @Suppress("DEPRECATION")
 class IntroLoadingActivity : AppCompatActivity() {
 

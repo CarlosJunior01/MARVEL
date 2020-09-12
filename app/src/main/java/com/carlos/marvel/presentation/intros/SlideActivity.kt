@@ -9,6 +9,10 @@ import com.carlos.marvel.presentation.marvel.MarvelActivity
 import com.heinrichreimersoftware.materialintro.app.IntroActivity
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide
 
+/**
+ * Created by CarlosJr
+ */
+
 class SlideActivity : IntroActivity () {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
