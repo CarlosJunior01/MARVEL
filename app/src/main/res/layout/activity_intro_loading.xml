@@ -10,6 +10,7 @@
     <ImageView
         android:id="@+id/imageIntro"
         android:layout_height="0dp"
+        android:layout_width="0dp"
         android:contentDescription="@string/imagem_capa"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
