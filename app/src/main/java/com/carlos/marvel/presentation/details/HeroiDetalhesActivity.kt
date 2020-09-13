@@ -11,12 +11,14 @@ import kotlinx.android.synthetic.main.activity_marvel.*
 import kotlinx.android.synthetic.main.activity_marvel.toolbarMain
 import kotlinx.android.synthetic.main.item_descricao.*
 
+/**
+ * Created by CarlosJr
+ */
+
 class HeroiDetalhesActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.item_descricao)
-
-        //Configurando toolbar
         setupToolbar(toolbarMain, R.string.toolbar_detalhes, true)
 
         val name = intent.getStringExtra("CHAR_NAME")

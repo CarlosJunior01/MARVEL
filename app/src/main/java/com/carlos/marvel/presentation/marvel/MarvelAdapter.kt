@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.carlos.marvel.R
-import com.carlos.marvel.data.model.MarvelItem
 import com.carlos.marvel.data.network.response.MarvelResultsResponse
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_recycler.view.*
@@ -16,7 +15,7 @@ import kotlinx.android.synthetic.main.item_recycler.view.*
  */
 
 class MarvelAdapter(
-    private val heroesList: List<MarvelResultsResponse>,
+    private val heroisList: List<MarvelResultsResponse>,
     val OnItemClickListener: ((marvelResults: MarvelResultsResponse) -> Unit)
 ) : RecyclerView.Adapter<MarvelAdapter.HeroesViewHolder>() {
 
@@ -27,12 +26,12 @@ class MarvelAdapter(
     }
 
     override fun getItemCount(): Int {
-        return heroesList.size
+        return heroisList.size
     }
 
     override fun onBindViewHolder(holder: HeroesViewHolder, position: Int) {
 
-        holder.bind(heroesList[position])
+        holder.bind(heroisList[position])
     }
 
     class HeroesViewHolder(
@@ -40,11 +39,11 @@ class MarvelAdapter(
         private val OnItemClickListener: ((marvelResults: MarvelResultsResponse) -> Unit)
     ) : RecyclerView.ViewHolder(itemView) {
 
-        private val heroName = itemView.nome_heroi
-        private val heroImg: ImageView = itemView.imagem_heroi
+        private val heroiName = itemView.nome_heroi
+        private val heroiImg: ImageView = itemView.imagem_heroi
 
         fun bind(aChar: MarvelResultsResponse) {
-            heroName.text = aChar.name
+            heroiName.text = aChar.name
             var thumbnail =
                 "${aChar.marvelThumbnail.path}/standard_large.${aChar.marvelThumbnail.extension}"
                     .split(":")
