@@ -16,7 +16,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageHero"
+            android:id="@+id/imagem_heroi"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:background="@color/writeColor"
@@ -24,10 +24,10 @@
             tools:srcCompat="@drawable/ic_launcher_foreground" />
 
         <TextView
-            android:id="@+id/textHeroName"
+            android:id="@+id/nome_heroi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageHero"
+            android:layout_below="@+id/imagem_heroi"
             android:layout_centerHorizontal="true"
             android:background="@color/writeColor"
             android:padding="12dp"
