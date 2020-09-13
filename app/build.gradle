@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -29,6 +30,7 @@ android {
 
 ext {
     glideVersion ="4.11.0"
+    retrofitVersion ="2.6.0"
 }
 
 dependencies {
@@ -51,6 +53,11 @@ dependencies {
 
     //slide intro
     implementation 'com.heinrichreimersoftware:material-intro:2.0.0'
+
+    //squareup retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.8.0")
 
     //squareup picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
