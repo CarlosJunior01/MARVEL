@@ -12,6 +12,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="125dp"
+        android:contentDescription="@string/imagemIntro"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

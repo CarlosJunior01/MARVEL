@@ -40,9 +40,10 @@
                 android:id="@+id/ImageDescricao"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
+                android:contentDescription="@string/imagem_capa"
                 android:padding="5dp"
-                android:scaleType="fitXY"
 
+                android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -70,6 +71,7 @@
                 android:layout_centerHorizontal="true"
 
                 android:layout_marginTop="-10dp"
+                android:contentDescription="@string/texto_descricao"
                 android:justificationMode="inter_word"
                 android:padding="10dp"
                 android:text="Descrição"
@@ -81,11 +83,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textDescricao"
-
                 android:layout_marginTop="-10dp"
                 android:background="@color/lightGray"
+                android:contentDescription="@string/texto_descricao"
                 android:padding="8dp"
-                android:text="© Copyright"
+                android:text="@string/copyright"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -97,8 +99,9 @@
                 android:layout_below="@+id/textDescricao"
 
                 android:layout_alignParentEnd="true"
+                android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="ID"
+                android:text="@string/id"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
                 android:textStyle="bold" />

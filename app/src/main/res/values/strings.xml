@@ -9,6 +9,12 @@
     <string name="intro_text1">Encontre seus heróis favoritos</string>
     <string name="intro_text2">Força e poder incontrolável</string>
     <string name="intro_text3">Preparado? Vamos nessa!</string>
-    <string name="into_button">Let\'s Go Hero</string>
+    <string name="intro_button">Let\'s Go Hero</string>
+    <string name="imagem_capa">Imagem da capa.</string>
+    <string name="imagem_loading">Imagem loading.</string>
+    <string name="imagem_intro">Imagem intro</string>
+    <string name="texto_descricao">Imagem intro</string>
+    <string name="id">ID</string>
+    <string name="copyright">© Copyright</string>
 
 </resources>
