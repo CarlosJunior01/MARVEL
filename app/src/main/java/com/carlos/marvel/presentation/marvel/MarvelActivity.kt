@@ -1,16 +1,13 @@
 package com.carlos.marvel.presentation.marvel
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import com.carlos.marvel.R
-import com.carlos.marvel.data.model.MarvelItem
 import com.carlos.marvel.presentation.baseActivity.BaseActivity
-import com.squareup.picasso.Picasso
+import com.carlos.marvel.presentation.details.HeroiDetalhesActivity
 import kotlinx.android.synthetic.main.activity_marvel.*
-import kotlinx.android.synthetic.main.item_recycler.view.*
 
 /**
  * Created by CarlosJr
@@ -31,7 +28,18 @@ class MarvelActivity : BaseActivity() {
                 with(recyclerView) {
                     layoutManager = GridLayoutManager(this@MarvelActivity, 2)
                     setHasFixedSize(true)
-                    adapter = MarvelAdapter(marvelList)
+                    adapter = MarvelAdapter(marvelList) {
+
+                        val intent = HeroiDetalhesActivity.getStartIntent(
+                            this@MarvelActivity,
+                            it.name,
+                            it.description,
+                            it.marvelThumbnail.path,
+                            it.marvelThumbnail.extension,
+                            it.id
+                        )
+                        this@MarvelActivity.startActivity(intent)
+                    }
                 }
             }
         })

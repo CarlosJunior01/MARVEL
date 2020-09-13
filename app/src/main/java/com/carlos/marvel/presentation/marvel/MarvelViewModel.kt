@@ -4,6 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.carlos.marvel.data.model.MarvelItem
+import com.carlos.marvel.data.network.response.MarvelResultsResponse
+import com.carlos.marvel.data.network.response.MarvelRootResponse
+import com.carlos.marvel.data.network.service.ApiService
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 /**
  * Created by CarlosJr
@@ -11,20 +17,23 @@ import com.carlos.marvel.data.model.MarvelItem
 
 class MarvelViewModel :ViewModel() {
 
-    val heroisLiveData : MutableLiveData<List<MarvelItem>> = MutableLiveData()
+    val _heroisLiveData = MutableLiveData<List<MarvelResultsResponse>>()
+    val heroisLiveData : LiveData<List<MarvelResultsResponse>> = _heroisLiveData
 
     fun getHeroes(){
-       heroisLiveData.value = createFakeHerois()
-    }
+        ApiService.service.getHeroes().enqueue(object : Callback<MarvelRootResponse> {
 
-    fun createFakeHerois(): List<MarvelItem> {
-        return listOf(
-            MarvelItem("Homem Aranha1"),
-            MarvelItem("Homem Aranha2"),
-            MarvelItem("Homem Aranha3"),
-            MarvelItem("Homem Aranha4"),
-            MarvelItem("Homem Aranha5"),
-            MarvelItem("Homem Aranha6")
-        )
+            override fun onResponse(call: Call<MarvelRootResponse>, response: Response<MarvelRootResponse>) {
+                if (response.isSuccessful){
+                    val listMarvelItems: MutableList<MarvelItem> = mutableListOf()
+
+                    response.body()?.let {heroesResponse ->
+                        _heroisLiveData.value = heroesResponse.marvelDataResponse.results
+                    }
+                }
+            }
+            override fun onFailure(call: Call<MarvelRootResponse>, t: Throwable) {
+            }
+        })
     }
 }

@@ -15,6 +15,6 @@ data class MarvelResultsResponse (
     val description : String,
 
     @Json(name = "thumbnail")
-    val marvelThumbnailResponse : MarvelThumbnailResponse
+    val marvelThumbnail : MarvelThumbnailResponse
 
 )

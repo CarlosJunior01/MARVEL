@@ -3,6 +3,7 @@
 
     <!-- Toolbar Name -->
     <string name="toolbar_principal">MARVEL</string>
+    <string name="toolbar_detalhes">DETALHES</string>
 
     <!-- Intros -->
     <string name="intro_text1">Encontre seus heróis favoritos</string>
