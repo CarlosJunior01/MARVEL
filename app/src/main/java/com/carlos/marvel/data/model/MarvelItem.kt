@@ -5,7 +5,7 @@ package com.carlos.marvel.data.model
  */
 
 data class MarvelItem (
-    val nomeHeroi: String,
+    val nomeHeroi: String
    /* val descricaoHeroi: String,
     val imagemHeroi: String,
     val extensao : String,

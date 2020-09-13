@@ -7,6 +7,7 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
+
     defaultConfig {
         applicationId "com.carlos.marvel"
         minSdkVersion 22
@@ -29,8 +30,9 @@ android {
 }
 
 ext {
-    glideVersion ="4.11.0"
-    retrofitVersion ="2.6.0"
+    glideVersion    = "4.11.0"
+    retrofitVersion = "2.6.0"
+    moshiVersion    = "1.9.3"
 }
 
 dependencies {
@@ -43,7 +45,7 @@ dependencies {
     implementation 'android.arch.lifecycle:extensions:1.1.1'
 
     //junit test
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
@@ -57,7 +59,8 @@ dependencies {
     //squareup retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
-    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.9.2")
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
 
     //squareup picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
