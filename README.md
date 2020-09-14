@@ -75,14 +75,36 @@ Pois passaremos os parâmetros para a API e receberemos como resposta o retorno 
 **Marvel account:**
 > https://developer.marvel.com/account
 
-* :ballot_box_with_check: **3º Configuração das chaves e execução:**
+* :ballot_box_with_check: **3º Configuração das chaves**
 
 Com as chaves em mãos, abra esse projeto no Android Studio, navegue até a pasta service e abra a ChavesApi e inclua suas chaves obtidas no site da API da Marvel.
-Após a configuração das chaves o projeto já está pronto e pode ser executado normalmente. 
-
 Segue imagem para melhor orientação para navegação até o pack para configuração das chaves da API:
 
 ![image](https://user-images.githubusercontent.com/9430430/93116267-6eeef180-f693-11ea-94ce-0343eeabdedf.png)
+
+* :ballot_box_with_check: **4º Configuração bibliotecas no build.grandle **
+Abra o build.grandle (Module: app) e inclua as dependências específicas desse projeto e faça a sincronização "Sync Now"
+
+    //glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+    
+    apply plugin: 'kotlin-kapt' 
+    
+    //slide intro
+    implementation 'com.heinrichreimersoftware:material-intro:2.0.0'
+
+    //squareup retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
+
+    //squareup picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    
+* :ballot_box_with_check: **5º Execução do projeto:**
+Após todas as configurações iniciais das chaves e libs o projeto está pronto e pode ser executado normalmente. 
 
 *******
 ### TEORIA
