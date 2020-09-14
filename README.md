@@ -57,9 +57,37 @@ App Android Nativo escrito em Kotlin, consumindo API da Marvel e processando res
 * :ballot_box_with_check: **MarvelViewModel:**
 > Classe responsável por obter os dados da camada de rede e passar esses dados para a activity/fragmetns fazendo a comunicação entre eles através da LiveData.
   A responsabilidade portanto do ViewModel é gerenciar os dados da Activity e fazer a ponte com as demais camadas do Aplicativo.
+  
+*******
+### INSTRUÇÕES REFERENTES A CONFIGURAÇÃO
+*******
+**Requisitos:**
+
+* :ballot_box_with_check: **1º Ter o Android Studio Instalado na máquina e conexão com Internet**
+* >https://developer.android.com/studio
+
+* :ballot_box_with_check: **2º Cadastro API MARVEL:**
+
+Será necessário ter cadastro na API da Marvel para obtenção das chaves de autentificação Públicas e Privadas(Public Key, Private Key) 
+para isso deverá fazer um cadastro e criação da conta no site oficial da API. Com essas chaves conseguimos fazer conexão com o servidor para obtenção dos dados.
+Pois passaremos os parâmetros para a API e receberemos como resposta o retorno dos dados de resultado dessa requisição.
+
+**Marvel account:**
+> https://developer.marvel.com/account
+
+* :ballot_box_with_check: **3º Configuração das chaves e execução:**
+
+Com as chaves em mãos, abra esse projeto no Android Studio, navegue até a pasta service e abra a ChavesApi e inclua suas chaves obtidas no site da API da Marvel.
+Após a configuração das chaves o projeto já está pronto e pode ser executado normalmente. 
+
+Segue imagem para melhor orientação para navegação até o pack para configuração das chaves da API:
+
+![image](https://user-images.githubusercontent.com/9430430/93116267-6eeef180-f693-11ea-94ce-0343eeabdedf.png)
+
 *******
 ### TEORIA
 *******
+
 * **A 1.1 - Ciclo de Vida de uma Activity**
 > A Activity é um componente de aplicação com um ciclo de vida específico. Quando o usuário acessa a aplicação, navega pelas opções, sai ou retorna para a mesma, as atividades que a compõem passam por uma série de estados do ciclo de vida.
 
@@ -144,6 +172,7 @@ Sem dúvida, o principal objetivo de escolher a arquitetura MVVM é abstrair as 
 
 **Conclusão:** 
 Para este projeto foi escolhido o padrão de Arquitetura MVVM justamente por fazer uso um padrão de divisão de responsabilidades, com separação de conceitos, e camadas diferentes, nele temos o desacoplamento da camada de "Network" da camada de "Apresentação", facilitando assim a organização, clareza e entendimento de cada parte do projeto, facilitando e  possibilitando o trabalho em diferentes frentes de camadas desacopladas em um projeto mais organizado e flexível.
+
 
 
 
