@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.about.VideoActivity"></activity>
-        <activity android:name=".presentation.about.AboutActivity" />
+        <activity android:name=".presentation.about.VideoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".presentation.about.AboutActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".presentation.details.HeroiDetalhesActivity"
             android:parentActivityName=".presentation.marvel.MarvelActivity"
