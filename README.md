@@ -10,7 +10,7 @@ App Android Nativo escrito em Kotlin, consumindo API da Marvel e processando res
 ![Package Structure](https://user-images.githubusercontent.com/9430430/93045298-2ac90600-f62d-11ea-8df4-e7a1871812c7.JPG)
 *******
 ### NETWORK LAYER
-* :ballot_box_with_check: **data:**
+> **DATA**
 *******
 * :ballot_box_with_check:    **network:**
 >Pacote onde ficam as classes de dados. Classes do retrofit e classes do response e os endpoint's da aplicação.
@@ -36,7 +36,7 @@ App Android Nativo escrito em Kotlin, consumindo API da Marvel e processando res
 > Classe response (responsável pelo mapeamento da estrutura de Json da API)
 *******
 ### APRESENTAÇÃO
-* :ballot_box_with_check: **presentation:**
+> **PRESENTATION**
 *******
 > Pacote aonde ficam as activitys, view models e qualquer outra classe relacionada a apresentação.
   Toda que o usuário vizualiza e interage fica nesse pacote.
