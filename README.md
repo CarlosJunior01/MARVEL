@@ -10,7 +10,7 @@ App Android Nativo escrito em Kotlin, consumindo API da Marvel e processando res
 ![Package Structure](https://user-images.githubusercontent.com/9430430/93045298-2ac90600-f62d-11ea-8df4-e7a1871812c7.JPG)
 *******
 ### NETWORK LAYER
-# data:
+* :ballot_box_with_check: **data:**
 *******
 * :ballot_box_with_check:    **network:**
 >Pacote onde ficam as classes de dados. Classes do retrofit e classes do response e os endpoint's da aplicação.
@@ -41,20 +41,20 @@ App Android Nativo escrito em Kotlin, consumindo API da Marvel e processando res
 > Pacote aonde ficam as activitys, view models e qualquer outra classe relacionada a apresentação.
   Toda que o usuário vizualiza e interage fica nesse pacote.
 *******
-* BaseActivity
+* :ballot_box_with_check: **BaseActivity:**
  > Classe herdeira de AppCompatActivity() que configura uma toolbar padrão e foi 
              implementado também por meio dessa classe ações relacionadas ao menu na aplicação.
 *******
-* DetalhesActivity
+* :ballot_box_with_check: **DetalhesActivity:**
 > Classe da Activity Details responsável pela exibição de detalhes dos personagens selecionados.
 *******
-* MarvelActivity
+* :ballot_box_with_check: **MarvelActivity:**
 > Classe principal (MainActivity) do projeto (features).
 
-* MarvelAdapter
+* :ballot_box_with_check: **MarvelAdapter:**
 > Classe responsável por fazer a ligação do Array list para dentro do RecyclerView.
 
-* MarvelViewModel
+* :ballot_box_with_check: **MarvelViewModel:**
 > Classe responsável por obter os dados da camada de rede e passar esses dados para a activity/fragmetns fazendo a comunicação entre eles através da LiveData.
   A responsabilidade portanto do ViewModel é gerenciar os dados da Activity e fazer a ponte com as demais camadas do Aplicativo.
 *******
