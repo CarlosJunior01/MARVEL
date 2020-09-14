@@ -17,4 +17,14 @@
     <string name="id">ID</string>
     <string name="copyright">© Copyright</string>
 
+
+    <!-- About -->
+    <string name="app">Marvel APP</string>
+    <string name="about_dev">Desenvolvido por Carlos Junior.</string>
+    <string name="about_01">Projeto final do programa beca everis 2020</string>
+    <string name="about_02">Aplicativo Android Nativo escrito em Kotlin, consumindo API Marvel e
+        processando resposta com retrofit, utilizando padrão de arquitetura MVVM, divisão
+        de responsabilidades, com separação de conceitos e desacoplamento de camadas.
+    </string>
+
 </resources>

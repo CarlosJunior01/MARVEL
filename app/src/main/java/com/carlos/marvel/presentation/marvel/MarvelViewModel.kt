@@ -20,8 +20,8 @@ class MarvelViewModel :ViewModel() {
     val _heroisLiveData = MutableLiveData<List<MarvelResultsResponse>>()
     val heroisLiveData : LiveData<List<MarvelResultsResponse>> = _heroisLiveData
 
-    fun getHeroes(){
-        ApiService.service.getHeroes().enqueue(object : Callback<MarvelRootResponse> {
+    fun getHerois(){
+        ApiService.service.getHerois().enqueue(object : Callback<MarvelRootResponse> {
 
             override fun onResponse(call: Call<MarvelRootResponse>, response: Response<MarvelRootResponse>) {
                 if (response.isSuccessful){

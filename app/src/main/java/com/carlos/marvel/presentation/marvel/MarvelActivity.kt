@@ -15,10 +15,14 @@ import kotlinx.android.synthetic.main.activity_marvel.*
 
 class MarvelActivity : BaseActivity() {
 
+    var click = false
+    var count = 2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_marvel)
         setupToolbar(toolbarMain, R.string.toolbar_principal)
+
 
         val marvelViewModel: MarvelViewModel =
             ViewModelProviders.of(this).get(MarvelViewModel::class.java)
@@ -26,7 +30,7 @@ class MarvelActivity : BaseActivity() {
         marvelViewModel.heroisLiveData.observe(this, Observer {
             it?.let { marvelList ->
                 with(recyclerView) {
-                    layoutManager = GridLayoutManager(this@MarvelActivity, 2)
+                    layoutManager = GridLayoutManager(this@MarvelActivity, count)
                     setHasFixedSize(true)
                     adapter = MarvelAdapter(marvelList) {
 
@@ -43,6 +47,6 @@ class MarvelActivity : BaseActivity() {
                 }
             }
         })
-        marvelViewModel.getHeroes()
+        marvelViewModel.getHerois()
     }
 }
