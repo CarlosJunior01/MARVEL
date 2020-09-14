@@ -82,7 +82,7 @@ Segue imagem para melhor orientação para navegação até o pack para configur
 
 ![image](https://user-images.githubusercontent.com/9430430/93116267-6eeef180-f693-11ea-94ce-0343eeabdedf.png)
 
-* :ballot_box_with_check: **4º Configuração bibliotecas no build.grandle **
+* :ballot_box_with_check: **4º Configuração bibliotecas no build.grandle**
 Abra o build.grandle (Module: app) e inclua as dependências específicas desse projeto e faça a sincronização "Sync Now"
 
     //glide
