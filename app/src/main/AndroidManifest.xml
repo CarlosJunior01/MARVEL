@@ -17,7 +17,7 @@
         <activity android:name=".presentation.about.AboutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".presentation.details.HeroiDetalhesActivity"
+            android:name=".presentation.details.DetalhesActivity"
             android:parentActivityName=".presentation.marvel.MarvelActivity"
             android:screenOrientation="portrait" />
         <activity

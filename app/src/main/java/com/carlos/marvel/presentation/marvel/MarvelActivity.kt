@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import com.carlos.marvel.R
 import com.carlos.marvel.presentation.baseActivity.BaseActivity
-import com.carlos.marvel.presentation.details.HeroiDetalhesActivity
+import com.carlos.marvel.presentation.details.DetalhesActivity
 import kotlinx.android.synthetic.main.activity_marvel.*
 
 /**
@@ -15,32 +15,23 @@ import kotlinx.android.synthetic.main.activity_marvel.*
 
 class MarvelActivity : BaseActivity() {
 
-    var click = false
-    var count = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_marvel)
         setupToolbar(toolbarMain, R.string.toolbar_principal)
 
+        val marvelViewModel: MarvelViewModel = ViewModelProviders.of(this).get(MarvelViewModel::class.java)
 
-        val marvelViewModel: MarvelViewModel =
-            ViewModelProviders.of(this).get(MarvelViewModel::class.java)
-
-        marvelViewModel.heroisLiveData.observe(this, Observer {
+        marvelViewModel.heroisLiveData.observe(this, {
             it?.let { marvelList ->
                 with(recyclerView) {
-                    layoutManager = GridLayoutManager(this@MarvelActivity, count)
+                    layoutManager = GridLayoutManager(this@MarvelActivity, 2 )
                     setHasFixedSize(true)
                     adapter = MarvelAdapter(marvelList) {
 
-                        val intent = HeroiDetalhesActivity.getStartIntent(
-                            this@MarvelActivity,
-                            it.name,
-                            it.description,
-                            it.marvelThumbnail.path,
-                            it.marvelThumbnail.extension,
-                            it.id
+                        val intent = DetalhesActivity.getStartIntent(
+                            this@MarvelActivity, it.id
                         )
                         this@MarvelActivity.startActivity(intent)
                     }

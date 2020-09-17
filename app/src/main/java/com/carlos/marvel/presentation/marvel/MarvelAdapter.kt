@@ -38,15 +38,17 @@ class MarvelAdapter(
         itemView: View,
         private val OnItemClickListener: ((marvelResults: MarvelResultsResponse) -> Unit)
     ) : RecyclerView.ViewHolder(itemView) {
-
         private val heroiName = itemView.nome_heroi
-        private val heroiImg: ImageView = itemView.imagem_heroi
+
 
         fun bind(aChar: MarvelResultsResponse) {
+
             heroiName.text = aChar.name
+
             var thumbnail =
                 "${aChar.marvelThumbnail.path}/standard_large.${aChar.marvelThumbnail.extension}"
                     .split(":")
+
             Picasso.get().load("https:" + thumbnail[1]).into(itemView.imagem_heroi)
 
             itemView.setOnClickListener {

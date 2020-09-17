@@ -1,5 +1,6 @@
 package com.carlos.marvel.presentation.marvel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -17,8 +18,8 @@ import retrofit2.Response
 
 class MarvelViewModel :ViewModel() {
 
-    val _heroisLiveData = MutableLiveData<List<MarvelResultsResponse>>()
-    val heroisLiveData : LiveData<List<MarvelResultsResponse>> = _heroisLiveData
+    val mutableLiveData = MutableLiveData<List<MarvelResultsResponse>>()
+    val heroisLiveData : LiveData<List<MarvelResultsResponse>> = mutableLiveData
 
     fun getHerois(){
         ApiService.service.getHerois().enqueue(object : Callback<MarvelRootResponse> {
@@ -28,11 +29,14 @@ class MarvelViewModel :ViewModel() {
                     val listMarvelItems: MutableList<MarvelItem> = mutableListOf()
 
                     response.body()?.let {heroesResponse ->
-                        _heroisLiveData.value = heroesResponse.marvelDataResponse.results
+                        mutableLiveData.value = heroesResponse.marvelDataResponse.results
                     }
+                }else{
+                    Log.e("Erro API", response.message())
                 }
             }
             override fun onFailure(call: Call<MarvelRootResponse>, t: Throwable) {
+                Log.e("Erro API ", t.message.toString())
             }
         })
     }
