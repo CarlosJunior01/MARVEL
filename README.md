@@ -1,6 +1,8 @@
 *******
 ### MARVEL
 *******
+![GitHub top language](https://img.shields.io/github/languages/top/Carlosjr01/MARVEL) [![MVVM](https://img.shields.io/badge/Architecture-MVVM-green)](https://www.youtube.com/watch?v=tIPxSWx5qpk) [![coroutines](https://img.shields.io/badge/Coroutines-Asynchronous-red)](https://developer.android.com/kotlin/coroutines) [![Kotlin-Android-Extensions ](https://img.shields.io/badge/Kotlin--Android--Extensions-plugin-red.svg)](https://kotlinlang.org/docs/tutorials/android-plugin.html) ![API](https://img.shields.io/badge/API-MARVEL-lightgrey) ![GitHub repo size](https://img.shields.io/github/repo-size/Carlosjr01/MARVEL)
+
 App Android Nativo escrito em Kotlin, consumindo API da Marvel e processando resposta com retrofit2 e moschi. Projetado com padrão de arquitetura MVVM com divisão de responsabilidades, separação de conceitos e desacoplamento de camadas.
 *******
 ![Screen](https://user-images.githubusercontent.com/9430430/93039327-986d3600-f61d-11ea-928c-130ea94ba189.JPG)
