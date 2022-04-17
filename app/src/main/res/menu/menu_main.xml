@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Marvel"
+        android:id="@+id/marvel"
+        android:orderInCategory="100"/>
+    <item
+        android:title="About"
+        android:id="@+id/about"
+        android:orderInCategory="200"/>
+    <item
+        android:title="Sair"
+        android:id="@+id/sair"
+        android:orderInCategory="300"/>
+
+    <item
+        android:title="Sair"
+        android:id="@+id/sair2"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_power"/>
+
+</menu>

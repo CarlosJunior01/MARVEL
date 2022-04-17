@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">Marvel</string>
+    <string name="app_name">MARVEL</string>
+
+    <!-- Toolbar Name -->
+    <string name="toolbar_principal">MARVEL</string>
+    <string name="toolbar_detalhes">DETALHES</string>
+
+    <!-- Intros -->
+    <string name="intro_text1">Encontre seus heróis favoritos</string>
+    <string name="intro_text2">Força e poder incontrolável</string>
+    <string name="intro_text3">Preparado? Vamos nessa!</string>
+    <string name="intro_button">Let\'s Go Hero</string>
+    <string name="imagem_capa">Imagem da capa.</string>
+    <string name="imagem_loading">Imagem loading.</string>
+    <string name="imagem_intro">Imagem intro</string>
+    <string name="texto_descricao">Imagem intro</string>
+    <string name="id">ID</string>
+    <string name="copyright">© Copyright</string>
+
+
+    <!-- About -->
+    <string name="app">Marvel APP</string>
+    <string name="about_dev">Desenvolvido por Carlos Junior.</string>
+    <string name="about_01">Projeto final do programa beca everis 2020</string>
+    <string name="about_02">Aplicativo Android Nativo escrito em Kotlin, consumindo API Marvel e
+        processando resposta com retrofit, utilizando padrão de arquitetura MVVM, divisão
+        de responsabilidades, com separação de conceitos e desacoplamento de camadas.
+    </string>
+
 </resources>
